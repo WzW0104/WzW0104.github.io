@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+    
+    
+    
+    
+
+
+    <!-- meta -->
+
+
+<title>2020.1.14 | Wise_4</title>
+
+
+    <meta name="keywords" content="寒假 组合数学, Acmer Rookie">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="寒假小记​    –2021.1.14  ​    今天上午准备去看望奶奶，但是有些小问题，改天再去，下午收拾家务然后洗澡剪头巴拉巴拉的，睡了一小会都已经五点半了。 ​    两个题我觉得还挺有意思，K-th Beautiful String ，Sort the Array，不要问我为啥选择这么简单的题目，因为现在水平有限（吐槽一句，ABC的D题已经开始扫描线了？？？  第一题 K-th Beau">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020.1.14">
+<meta property="og:url" content="https://wzw0104.github.io/2021/01/14/2020-1-14/index.html">
+<meta property="og:site_name" content="Wise_4">
+<meta property="og:description" content="寒假小记​    –2021.1.14  ​    今天上午准备去看望奶奶，但是有些小问题，改天再去，下午收拾家务然后洗澡剪头巴拉巴拉的，睡了一小会都已经五点半了。 ​    两个题我觉得还挺有意思，K-th Beautiful String ，Sort the Array，不要问我为啥选择这么简单的题目，因为现在水平有限（吐槽一句，ABC的D题已经开始扫描线了？？？  第一题 K-th Beau">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-14T11:06:22.000Z">
+<meta property="article:modified_time" content="2021-01-14T11:07:19.453Z">
+<meta property="article:author" content="WzW">
+<meta property="article:tag" content="寒假 组合数学">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/WzW0104.github.io/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/WzW0104.github.io/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/WzW0104.github.io/" class="button">
+            <span class="logo__text">Wise_4</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/WzW0104.github.io/" class="navbar-menu button">首页</a>
+                
+                    <a href="/WzW0104.github.io/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/WzW0104.github.io/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/WzW0104.github.io/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/WzW0104.github.io/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/WzW0104.github.io/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/WzW0104.github.io/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/WzW0104.github.io/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/WzW0104.github.io/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/WzW0104.github.io/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        2020.1.14
+    </h1>
+    <div class="post-title__meta">
+        <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-14</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h2 id="寒假小记"><a href="#寒假小记" class="headerlink" title="寒假小记"></a>寒假小记</h2><p>​    –2021.1.14</p>
+<hr>
+<p>​    今天上午准备去看望奶奶，但是有些小问题，改天再去，下午收拾家务然后洗澡剪头巴拉巴拉的，睡了一小会都已经五点半了。</p>
+<p>​    两个题我觉得还挺有意思，<a target="_blank" rel="noopener" href="https://codeforces.ml/problemset/problem/1328/B">K-th Beautiful String</a> ，<a target="_blank" rel="noopener" href="https://codeforces.ml/problemset/problem/451/B">Sort the Array</a>，不要问我为啥选择这么简单的题目，因为现在水平有限（吐槽一句，ABC的D题已经开始扫描线了？？？</p>
+<hr>
+<h3 id="第一题-K-th-Beautiful-String"><a href="#第一题-K-th-Beautiful-String" class="headerlink" title="第一题 K-th Beautiful String"></a>第一题 K-th Beautiful String</h3><p>​    <strong>题意：</strong>一个字符串长度为 <strong>n</strong> ，且只能由两个 <strong>b</strong> 其他都是 <strong>a</strong> 组成，求字典序第 <strong>k</strong> 大的字符串。</p>
+<p>​    <strong>思路：</strong>观察发现所给出的 <strong>k -&gt; 字符串</strong> 的末尾是有规律的，如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">k值  -&gt;  末尾含有 b 的字符串长度</span><br><span class="line">1               2</span><br><span class="line"></span><br><span class="line">2 - 3           3</span><br><span class="line"></span><br><span class="line">4 - 6           4</span><br><span class="line"></span><br><span class="line">7 - 10          5</span><br></pre></td></tr></table></figure>
+<p>​    （**<em><u>精简？冗杂</u>**</em>）也就是说只要找到末尾长度，再根据 <strong>k值 **减去当前 **k值区间的最小值</strong> 就可以求出<strong>两个 b 之间的长度</strong>和<strong>从第一个b到结尾的长度</strong>。</p>
+<p>​    （*<u><strong>细致？啰嗦</strong></u>*）两个 b 把字符串分三段，第一步求出第一个b的所在 num，根据 arr 确定 k值 所在就可以，然后输出第一部分的 a 和 一个 b。第二步求出末尾 a 的长度，根据 k值 和区间左值求出。然后求出中间部分的 a 的长度。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// #include&lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,n) for(int i = 1;i &lt;= n;++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,n) for(int i = n;i &gt;= 1;--i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vi;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;ll&gt; vl;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="built_in">pair</span>&lt;ll,ll&gt; &gt; vpll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">100</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QUiCK</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Local</span><span class="params">()</span></span>&#123;</span><br><span class="line">    freopen(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    freopen(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,<span class="built_in">stdout</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; arr[maxn]; <span class="comment">// 存储同一末尾长度的k值左右端</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    QUiCK();</span><br><span class="line">    arr[<span class="number">1</span>].first = arr[<span class="number">1</span>].second = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt;= <span class="number">1e5</span>;i++)&#123;</span><br><span class="line">        arr[i].first = arr[i<span class="number">-1</span>].second + <span class="number">1</span>;</span><br><span class="line">        arr[i].second = arr[i].first + i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t;<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="keyword">int</span> n,k;<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">        <span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =  <span class="number">1</span>;i &lt;= <span class="number">1e5</span> ;i++)&#123; <span class="comment">// 寻找末尾含有b的长度</span></span><br><span class="line">            <span class="keyword">if</span>(k &gt;= arr[i].first &amp;&amp; k &lt;= arr[i].second) &#123;</span><br><span class="line">                pos = i;<span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> num = pos + <span class="number">1</span>; <span class="comment">// 末尾含有b的长度</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n - num;i++) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;a&#x27;</span> ;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">        <span class="keyword">int</span> cnt = k - arr[pos].first; <span class="comment">// 末尾a的长度</span></span><br><span class="line">        <span class="keyword">int</span> cur = n - <span class="number">2</span> - (n - num) - cnt; <span class="comment">// 两个 b 之间的长度</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= cur;i++) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;a&#x27;</span> ;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= cnt;i++) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 0 1 2 3</span></span><br><span class="line"><span class="comment">//  0 4 6 </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h3 id="第二题-Sort-the-Array"><a href="#第二题-Sort-the-Array" class="headerlink" title="第二题 Sort the Array"></a>第二题 Sort the Array</h3><p>​    一会开会了，留着补～～～</p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2021-01-14</p></div> 
+    <div class="post-meta__cats"><a href="/WzW0104.github.io/tags/%E5%AF%92%E5%81%87-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" class="post-tags__link button"># 寒假 组合数学</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/WzW0104.github.io/2021/01/12/Module/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Module
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2021 <a href="/WzW0104.github.io/">Wise_4</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>

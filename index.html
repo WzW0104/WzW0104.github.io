@@ -1,314 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>Wise_4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="WzW">
+  <meta name="keywords" content="Acmer Rookie">
+  <meta name="description" content="Wise_4's Blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/WzW0104.github.io/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
 
-    
+  <link rel="shortcut icon" href="/WzW0104.github.io/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
 
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!--icon-->
-
-    
-    
-    
-    
-    
-
-
-    <!-- meta -->
-
-
-<title>Wise_4</title>
-
-
-    <meta name="keywords" content="Acmer Rookie">
-
-
-
-
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="Wise_4&#39;s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wise_4">
-<meta property="og:url" content="https://wzw0104.github.io/index.html">
-<meta property="og:site_name" content="Wise_4">
-<meta property="og:description" content="Wise_4&#39;s Blog">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="WzW">
-<meta property="article:tag" content="Acmer Rookie">
-<meta name="twitter:card" content="summary_large_image">
-
-
-    
-<link rel="stylesheet" href="/WzW0104.github.io/css/style/main.css">
- 
-
-
-
-    
-    
-    
-
-     
-
-    <!-- custom head -->
-
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
 <meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+<div id="page">
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/WzW0104.github.io/" class="button">
-            <span class="logo__text">Wise_4</span>
-        </a>
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/cover.jpeg)">
+  <div class="overlay">
+  <div class="featured">
+    <div class="avatar"><a href="/WzW0104.github.io/"><img src="/WzW0104.github.io/images/avatar.jpeg"></a></div>
+    <span>WzW</span>
+    <h1>Wise_4</h1>
+    
+    
+  </div>
+  </div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/WzW0104.github.io/2021/01/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC/">数据结构 表达式求值</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-01-24</span>
+      <p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> Stack[<span class="number">1020</span>];</span><br><span class="line"><span class="keyword">int</span> top;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> out[<span class="number">1020</span>], in[<span class="number">1020</span>];</span><br><span class="line"><span class="keyword">int</span> Len;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Function ：返回算术运算符的优先级</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Priority</span><span class="params">(<span class="keyword">char</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x == <span class="string">&#x27;+&#x27;</span> || x == <span class="string">&#x27;-&#x27;</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (x == <span class="string">&#x27;*&#x27;</span> || x == <span class="string">&#x27;/&#x27;</span>) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Function ： 判断是否为算术运算符</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">IsOperator</span><span class="params">(<span class="keyword">char</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x == <span class="string">&#x27;+&#x27;</span> || x == <span class="string">&#x27;-&#x27;</span> || x == <span class="string">&#x27;*&#x27;</span> || x == <span class="string">&#x27;/&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Function ：将中缀表达式 s -&gt;&gt; 后缀表达式并存储在 out 中</span></span><br><span class="line"><span class="comment"> * len ： 中缀表达式的长度. Len ： 后缀表达式的长度</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Transfer</span><span class="params">(<span class="keyword">char</span> *s, <span class="keyword">int</span> len)</span> </span>&#123; <span class="comment">//</span></span><br><span class="line">    <span class="built_in">memset</span>(out, <span class="string">&#x27;\0&#x27;</span>, <span class="keyword">sizeof</span>(out)); <span class="comment">// 初始化后缀表达式的存储字符串 out</span></span><br><span class="line">    Len = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;    </span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isdigit</span>(s[i])) &#123; <span class="comment">// 是数字就直接进入 out</span></span><br><span class="line">            out[Len++] = s[i];</span><br><span class="line">            <span class="keyword">while</span> (i + <span class="number">1</span> &lt; len &amp;&amp; <span class="built_in">isdigit</span>(s[i + <span class="number">1</span>])) out[Len++] = s[i + <span class="number">1</span>], ++i;</span><br><span class="line">            out[Len++] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (s[i] == <span class="string">&#x27;(&#x27;</span>) Stack[++top] = s[i]; <span class="comment">// &#x27;(&#x27; 也是直接进入 out</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (s[i] == <span class="string">&#x27;)&#x27;</span>) &#123;  <span class="comment">// &#x27;)&#x27; 需要将与之匹配的 &#x27;(&#x27; 之间的所有内容塞进 out</span></span><br><span class="line">            <span class="keyword">while</span> (Stack[top] != <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                out[Len++] = Stack[top--];</span><br><span class="line">                out[Len++] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            --top;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">while</span> (IsOperator(s[i])) &#123;   <span class="comment">// 栈空，或者优先级较栈顶大，或者栈顶为 &#x27;(&#x27;，则运算符进栈，否则出栈进 out</span></span><br><span class="line">                <span class="keyword">if</span> (!top || Stack[top] == <span class="string">&#x27;(&#x27;</span> || Priority(Stack[top]) &lt; Priority(s[i])) &#123;</span><br><span class="line">                    Stack[++top] = s[i];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    out[Len++] = Stack[top--];</span><br><span class="line">                    out[Len++] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (top) &#123;  </span><br><span class="line">        out[Len++] = Stack[top--];</span><br><span class="line">        out[Len++] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Function ： 返回二元运算结果</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Cal</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">double</span> y, <span class="keyword">double</span> op)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (op == <span class="string">&#x27;+&#x27;</span>) ans = x + y;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&#x27;-&#x27;</span>) ans = x - y;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&#x27;*&#x27;</span>) ans = x * y;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">fabs</span>(y) &lt; <span class="number">1e-6</span>) <span class="built_in">exit</span>(<span class="number">20</span>);</span><br><span class="line">        ans = x / y;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Function ： 根据传入的后缀表达式 s 计算返回表达式的值</span></span><br><span class="line"><span class="comment"> * dst ： 暂时存储一段字符串.  Str ： 保存结果的模拟栈</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Calculate</span><span class="params">(<span class="keyword">char</span> *s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> dst[<span class="number">100</span>]; </span><br><span class="line">    <span class="keyword">double</span> Str[<span class="number">200</span>]; </span><br><span class="line">    <span class="keyword">int</span> top_1 = <span class="number">0</span>, i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; s[i]; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!s[i] || s[i] == <span class="string">&#x27; &#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="built_in">sscanf</span>(s + i, <span class="string">&quot;%s&quot;</span>, dst);  <span class="comment">// 绝了，从 s+i 位置往后，按照 scanf(&quot;%s&quot;,dst) 的规格输入到 dst 中</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isdigit</span>(dst[<span class="number">0</span>])) &#123; <span class="comment">// 如果是操作数，则进栈，否则取栈顶两个元素进二元计算并进栈</span></span><br><span class="line">            Str[++top_1] = atof(dst);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            Str[top_1 - <span class="number">1</span>] = Cal(Str[top_1 - <span class="number">1</span>], Str[top_1], dst[<span class="number">0</span>]);</span><br><span class="line">            --top_1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (s[i] &amp;&amp; s[i] != <span class="string">&#x27; &#x27;</span>) ++i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Str[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gets(in);</span><br><span class="line">    Transfer(in, <span class="built_in">strlen</span>(in));</span><br><span class="line">    out[Len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; out &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">double</span> ans = Calculate(out);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>刚学习，但觉得有些代码细节还是可以优化。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/WzW0104.github.io/2021/01/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/WzW0104.github.io/" class="navbar-menu button">首页</a>
-                
-                    <a href="/WzW0104.github.io/tags/" class="navbar-menu button">标签</a>
-                
-                    <a href="/WzW0104.github.io/archives/" class="navbar-menu button">归档</a>
-                
-                    <a href="/WzW0104.github.io/friends/" class="navbar-menu button">友链</a>
-                
-                    <a href="/WzW0104.github.io/page/" class="navbar-menu button">Page</a>
-                
-            </div>
-        
-        
-        
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/WzW0104.github.io/2021/01/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-Stack/">数据结构 Stack</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-01-23</span>
+      <p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span>&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    T *base,*top;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123; base = <span class="keyword">new</span> T[MAXSIZE]; top = base; &#125;                   <span class="comment">// 初始化</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(T t)</span> </span>&#123; *top++ = t; &#125;                                      <span class="comment">// 进栈</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123; <span class="keyword">if</span>(empty()) <span class="built_in">printf</span>(<span class="string">&quot;栈空!&quot;</span>); <span class="keyword">else</span> top--; &#125;              <span class="comment">// 出栈</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span></span>&#123; <span class="keyword">return</span> top == base; &#125;                                 <span class="comment">// 栈空</span></span><br><span class="line">    <span class="function">T <span class="title">Top</span><span class="params">()</span> </span>&#123; <span class="keyword">if</span>(empty()) <span class="keyword">return</span> <span class="number">0</span>; <span class="keyword">return</span> *(top<span class="number">-1</span>); &#125;                  <span class="comment">// 栈顶</span></span><br><span class="line">    <span class="function">ll <span class="title">Length</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> top - base; &#125;                                  <span class="comment">// 栈内元素数量</span></span><br><span class="line">    Stack() &#123; init(); &#125;                                                 <span class="comment">// 构造</span></span><br><span class="line">    ~Stack() &#123; <span class="keyword">if</span>(empty()) <span class="keyword">delete</span> top; <span class="keyword">else</span> <span class="keyword">delete</span> top,<span class="keyword">delete</span> base; &#125;   <span class="comment">// 析构</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; <span class="comment">// 简单测试</span></span><br><span class="line">    Stack&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">20</span>;i++) q.push(i);</span><br><span class="line">    <span class="keyword">while</span>(!q.empty()) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Top = %d\n&quot;</span>,q.Top());</span><br><span class="line">        q.pop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Stack&lt;<span class="keyword">char</span>&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">25</span>;i++) s.push(i + <span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">    <span class="keyword">while</span>(!s.empty()) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Top = %c\n&quot;</span>,s.Top());</span><br><span class="line">        s.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-        
 
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                
-                    <a href="/WzW0104.github.io/" class="dropdown-menu button">首页</a>
-                
-                    <a href="/WzW0104.github.io/tags/" class="dropdown-menu button">标签</a>
-                
-                    <a href="/WzW0104.github.io/archives/" class="dropdown-menu button">归档</a>
-                
-                    <a href="/WzW0104.github.io/friends/" class="dropdown-menu button">友链</a>
-                
-                    <a href="/WzW0104.github.io/page/" class="dropdown-menu button">Page</a>
-                
-            </div>
-        
+<p>书上的：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> *base;</span><br><span class="line">    <span class="keyword">int</span> *top;</span><br><span class="line">    <span class="keyword">int</span> stacksize;</span><br><span class="line">&#125;SqStack;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">InitStack</span><span class="params">(SqStack &amp;s)</span></span>&#123;</span><br><span class="line">    s.base = <span class="keyword">new</span> <span class="keyword">int</span>[MAXSIZE];</span><br><span class="line">    <span class="keyword">if</span>(!s.base) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;栈初始化失败！&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    s.top = s.base;</span><br><span class="line">    s.stacksize = MAXSIZE;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">DestroyStack</span><span class="params">(SqStack &amp;s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!s.base) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;栈不存在！&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> s.base;</span><br><span class="line">    <span class="keyword">delete</span> s.top;</span><br><span class="line">    s.stacksize = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ClearStack</span><span class="params">(SqStack &amp;s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!s.base) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;栈不存在！&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    s.top = s.base;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">push</span><span class="params">(SqStack &amp;s,<span class="keyword">int</span> e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(s.top - s.base == s.stacksize) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    *s.top++ = e;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">StackEmpty</span><span class="params">(SqStack &amp;s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s.base == s.top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">StackLength</span><span class="params">(SqStack &amp;s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s.top - s.base;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pop</span><span class="params">(SqStack &amp;s,<span class="keyword">int</span> &amp;e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(s.top == s.base) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    e = *--s.top;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetTop</span><span class="params">(SqStack &amp;s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(s.top != s.base) <span class="keyword">return</span> *(s.top - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">StackTraverse</span><span class="params">(SqStack &amp;s)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *i = s.base;</span><br><span class="line">    <span class="keyword">while</span>(i != s.top) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,*i);</span><br><span class="line">        ++i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    SqStack s ;</span><br><span class="line">    InitStack(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; <span class="number">10</span>;i++) push(s,i);</span><br><span class="line">    StackTraverse(s);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Top = %d\n&quot;</span>,GetTop(s));</span><br><span class="line">    <span class="keyword">int</span> Top ;</span><br><span class="line">    pop(s,Top);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Length = %lld\n&quot;</span>,StackLength(s));</span><br><span class="line"></span><br><span class="line">    ClearStack(s);</span><br><span class="line">    StackTraverse(s);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    SqStack a;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,StackEmpty(a));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</p>
+      <div class="post-button"><a class="btn" href="/WzW0104.github.io/2021/01/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-Stack/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
-</header>
-
-
-    <div class="cover">
-        <div class="cover__logo">
-            
-                <h1>Wise_4</h1>
-            
-        </div>
-        
-        
-            <div class="cover__intro">
-                <p>留给自己随意折腾的一块地方嘞～</p>
- 
-            </div>
-        
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/WzW0104.github.io/2021/01/19/2021-1-18/">51Nod - 1305 Pairwise Sum and Divide</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-01-19</span>
+      <p><h3 id="题目：1305-Pairwise-Sum-and-Divide"><a href="#题目：1305-Pairwise-Sum-and-Divide" class="headerlink" title="题目：1305 Pairwise Sum and Divide"></a>题目：<a target="_blank" rel="noopener" href="https://www.51nod.com/Challenge/Problem.html#problemId=1305">1305 Pairwise Sum and Divide</a></h3><h3 id="做题的心路："><a href="#做题的心路：" class="headerlink" title="做题的心路："></a>做题的心路：</h3><p>​        又是一个需要优化的题目，让我看看怎么优化最佳呢？然后开始找演草纸写写画画，恍然大悟的发现了一个还不错的式子，<del>自信心爆棚的敲起来了代码</del>，然后就过了样例的时候，WTF？？？这尼玛还能有错？这不科学！！！冷静一下发现好像有问题，其实好像式子有点不对，因为拆开之后分别想加和式子计算不匹配。啊不对，让我仔细想想……好像除了1之外没啥能算上数的，emmmmm，2的时候好像只有2，gan！！！不想了，默默打开百度。。。四点关键，前三点都对了，除了除了其他不算数。。。。（还有1 1 是算 2）</p>
+<h3 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h3><ul>
+<li>a = b = 1.  —&gt; 2</li>
+<li>a = 1,b != 1  —-&gt; 1</li>
+<li>a = 2 == b ,  —&gt; 1</li>
+<li>其他0</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">ll arr[maxn];</span><br><span class="line"><span class="keyword">int</span> g_1[maxn],g_2[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    QUiCK();</span><br><span class="line">    <span class="keyword">int</span> n;<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    rep(i,n) <span class="built_in">cin</span> &gt;&gt; arr[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = n;i &gt;= <span class="number">1</span>;--i) &#123;</span><br><span class="line">        g_1[i] = g_1[i+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(arr[i] == <span class="number">1</span>) g_1[i]++;</span><br><span class="line">        g_2[i] = g_2[i+<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>(arr[i] == <span class="number">2</span>) g_2[i]++;</span><br><span class="line">    &#125;</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n;i++)&#123;</span><br><span class="line">        <span class="comment">// cout &lt;&lt; g_1[i + 1] &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">if</span>(arr[i] == <span class="number">1</span>) &#123;</span><br><span class="line">            ans += n - i + g_1[i+<span class="number">1</span>];</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(arr[i] == <span class="number">2</span>)&#123;</span><br><span class="line">            ans += g_1[i+<span class="number">1</span>] + g_2[i+<span class="number">1</span>];</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            ans += g_1[i+<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>反思：记得多方面思考，还要多点耐心</strong></p>
+</p>
+      <div class="post-button"><a class="btn" href="/WzW0104.github.io/2021/01/19/2021-1-18/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
-
-            <main class="main">
-    
-    <div class="post-list">
-        
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        数据结构 表达式求值
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-24</a>
-    
- 
-</div>
-<div class="post-entry__tags"><a href="/WzW0104.github.io/tags/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%8C%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%8C%E6%A0%88/" class="post-tags__link button"># 中缀表达式，后缀表达式，栈</a></div> 
-<a href="/WzW0104.github.io/2021/01/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC/" class="post-entry__link">数据结构 表达式求值</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        数据结构 Stack
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-23</a>
-    
- 
-</div>
-<div class="post-entry__tags"><a href="/WzW0104.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-tags__link button"># 数据结构</a></div> 
-<a href="/WzW0104.github.io/2021/01/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-Stack/" class="post-entry__link">数据结构 Stack</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        51Nod - 1305 Pairwise Sum and Divide
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-19</a>
-    
- 
-</div>
-<div class="post-entry__tags"></div> 
-<a href="/WzW0104.github.io/2021/01/19/2021-1-18/" class="post-entry__link">51Nod - 1305 Pairwise Sum and Divide</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        CF 1328-B &amp;&amp; 451-B
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-14</a>
-    
- 
-</div>
-<div class="post-entry__tags"><a href="/WzW0104.github.io/tags/%E5%AF%92%E5%81%87-%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/" class="post-tags__link button"># 寒假 组合数学</a></div> 
-<a href="/WzW0104.github.io/2021/01/14/2021-1-14/" class="post-entry__link">CF 1328-B &amp;&amp; 451-B</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Module
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-12</a>
-    
- 
-</div>
-<div class="post-entry__tags"><a href="/WzW0104.github.io/tags/%E6%9D%BF%E5%AD%90/" class="post-tags__link button"># 板子</a></div> 
-<a href="/WzW0104.github.io/2021/01/12/Module/" class="post-entry__link">Module</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        First
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-12</a>
-    
- 
-</div>
-<div class="post-entry__tags"></div> 
-<a href="/WzW0104.github.io/2021/01/12/First/" class="post-entry__link">First</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        寒假训练
-    </h2>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/WzW0104.github.io/archives/2021/01/" class="post-meta__date button">2021-01-12</a>
-    
- 
-</div>
-<div class="post-entry__tags"></div> 
-<a href="/WzW0104.github.io/2021/01/12/%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83/" class="post-entry__link">寒假训练</a>
-                </div>
-            
-        
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/WzW0104.github.io/2021/01/14/2021-1-14/">CF 1328-B && 451-B</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-01-14</span>
+      <p><h2 id="寒假小记"><a href="#寒假小记" class="headerlink" title="寒假小记"></a>寒假小记</h2><p>​    –2021.1.14</p>
+<hr>
+<p>​    今天上午准备去看望奶奶，但是有些小问题，改天再去，下午收拾家务然后洗澡剪头巴拉巴拉的，睡了一小会都已经五点半了。</p>
+<p>​    两个题我觉得还挺有意思，<a target="_blank" rel="noopener" href="https://codeforces.ml/problemset/problem/1328/B">K-th Beautiful String</a> ，<a target="_blank" rel="noopener" href="https://codeforces.ml/problemset/problem/451/B">Sort the Array</a>，不要问我为啥选择这么简单的题目，因为现在水平有限（吐槽一句，ABC的D题已经开始扫描线了？？？</p>
+<hr>
+<h3 id="第一题-K-th-Beautiful-String"><a href="#第一题-K-th-Beautiful-String" class="headerlink" title="第一题 K-th Beautiful String"></a>第一题 K-th Beautiful String</h3><p>​    <strong>题意：</strong>一个字符串长度为 <strong>n</strong> ，且只能由两个 <strong>b</strong> 其他都是 <strong>a</strong> 组成，求字典序第 <strong>k</strong> 大的字符串。</p>
+<p>​    <strong>思路：</strong>观察发现所给出的 <strong>k -&gt; 字符串</strong> 的末尾是有规律的，如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">k值  -&gt;  末尾含有 b 的字符串长度</span><br><span class="line">1               2</span><br><span class="line"></span><br><span class="line">2 - 3           3</span><br><span class="line"></span><br><span class="line">4 - 6           4</span><br><span class="line"></span><br><span class="line">7 - 10          5</span><br></pre></td></tr></table></figure>
+<p>​    （**<em><u>精简？冗杂</u>**</em>）也就是说只要找到末尾长度，再根据 <strong>k值 **减去当前 **k值区间的最小值</strong> 就可以求出<strong>两个 b 之间的长度</strong>和<strong>从第一个b到结尾的长度</strong>。</p>
+<p>​    （*<u><strong>细致？啰嗦</strong></u>*）两个 b 把字符串分三段，第一步求出第一个b的所在 num，根据 arr 确定 k值 所在就可以，然后输出第一部分的 a 和 一个 b。第二步求出末尾 a 的长度，根据 k值 和区间左值求出。然后求出中间部分的 a 的长度。</p>
+<p>代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// #include&lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,n) for(int i = 1;i &lt;= n;++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,n) for(int i = n;i &gt;= 1;--i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vi;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;ll&gt; vl;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="built_in">pair</span>&lt;ll,ll&gt; &gt; vpll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">100</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QUiCK</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Local</span><span class="params">()</span></span>&#123;</span><br><span class="line">    freopen(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    freopen(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,<span class="built_in">stdout</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; arr[maxn]; <span class="comment">// 存储同一末尾长度的k值左右端</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    QUiCK();</span><br><span class="line">    arr[<span class="number">1</span>].first = arr[<span class="number">1</span>].second = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i &lt;= <span class="number">1e5</span>;i++)&#123;</span><br><span class="line">        arr[i].first = arr[i<span class="number">-1</span>].second + <span class="number">1</span>;</span><br><span class="line">        arr[i].second = arr[i].first + i - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> t;<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="keyword">int</span> n,k;<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">        <span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =  <span class="number">1</span>;i &lt;= <span class="number">1e5</span> ;i++)&#123; <span class="comment">// 寻找末尾含有b的长度</span></span><br><span class="line">            <span class="keyword">if</span>(k &gt;= arr[i].first &amp;&amp; k &lt;= arr[i].second) &#123;</span><br><span class="line">                pos = i;<span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> num = pos + <span class="number">1</span>; <span class="comment">// 末尾含有b的长度</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= n - num;i++) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;a&#x27;</span> ;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">        <span class="keyword">int</span> cnt = k - arr[pos].first; <span class="comment">// 末尾a的长度</span></span><br><span class="line">        <span class="keyword">int</span> cur = n - <span class="number">2</span> - (n - num) - cnt; <span class="comment">// 两个 b 之间的长度</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= cur;i++) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;a&#x27;</span> ;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= cnt;i++) <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 0 1 2 3</span></span><br><span class="line"><span class="comment">//  0 4 6 </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<h3 id="第二题-Sort-the-Array"><a href="#第二题-Sort-the-Array" class="headerlink" title="第二题 Sort the Array"></a>第二题 Sort the Array</h3><p>​    一会开会了，留着补～～～</p>
+</p>
+      <div class="post-button"><a class="btn" href="/WzW0104.github.io/2021/01/14/2021-1-14/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
-    
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/WzW0104.github.io/2021/01/12/Module/">Module</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-01-12</span>
+      <p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i,n) for(int i = 1;i &lt;= n;++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Rep(i,n) for(int i = n;i &gt;= 1;--i)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vi;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;ll&gt; vl;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="built_in">pair</span>&lt;ll,ll&gt; &gt; vpll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">100</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QUiCK</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Local</span><span class="params">()</span></span>&#123;</span><br><span class="line">    freopen(<span class="string">&quot;in.in&quot;</span>,<span class="string">&quot;r&quot;</span>,<span class="built_in">stdin</span>);</span><br><span class="line">    freopen(<span class="string">&quot;out.out&quot;</span>,<span class="string">&quot;w&quot;</span>,<span class="built_in">stdout</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">Cnm</span><span class="params">(ll n,ll m)</span></span>&#123;</span><br><span class="line">    ll cnt = <span class="number">1</span>;</span><br><span class="line">    rep(i,m) cnt = cnt * (n - i + <span class="number">1</span>) / i,cnt %= mod;</span><br><span class="line">    <span class="keyword">return</span> cnt % mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">ksm</span><span class="params">(ll a,ll b,ll MOD)</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b &amp; <span class="number">1</span>) ans *= a;</span><br><span class="line">        a *= a;b /= <span class="number">2</span>;</span><br><span class="line">        a %= MOD;</span><br><span class="line">        ans %= MOD;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+      <div class="post-button"><a class="btn" href="/WzW0104.github.io/2021/01/12/Module/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/WzW0104.github.io/2021/01/12/First/">First</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-01-12</span>
+      <p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;博客名称&quot;  &#x3D;&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式</span><br><span class="line">hexo p  &#x3D;&gt; hexo publish</span><br><span class="line">hexo g  &#x3D;&gt; hexo generate  #生成</span><br><span class="line">hexo s  &#x3D;&gt; hexo server  #启动服务预览</span><br><span class="line">hexo d  &#x3D;&gt; hexo deploy  #部署  </span><br><span class="line"></span><br><span class="line">hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。</span><br><span class="line">hexo server -s   #静态模式</span><br><span class="line">hexo server -p 5000   #更改端口</span><br><span class="line">hexo server -i 192.168.1.1   #自定义IP</span><br><span class="line">hexo clean   #清除缓存，网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g   #生成静态网页</span><br><span class="line">hexo d   #开始部署</span><br></pre></td></tr></table></figure>
+</p>
+      <div class="post-button"><a class="btn" href="/WzW0104.github.io/2021/01/12/First/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/WzW0104.github.io/2021/01/12/%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83/">寒假训练</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-01-12</span>
+      <p><h3 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h3><ul>
+<li>建议每场 <strong>CF Div 2</strong> 都打，然后<strong>最少</strong>补掉前四题（基本上是1700以下）</li>
+<li>建议每场 <strong>Atcoder 中的 ABC</strong> 都打，然后补掉全部六道题（基本上1700以下）</li>
+<li>寒假准备 VP 暑假的 <strong>HDU多校训练</strong>，预备<strong>一周两次</strong>，这是咱们三一块的，然后赛后<strong>至少</strong>补 <strong>有思路，或者难度不大的铜牌题</strong>，如果有可能，个人可以对自己要求更高一些。</li>
+<li>学校ACM里边可能会有一些训练，个人做好时间管理。</li>
+<li><a target="_blank" rel="noopener" href="https://codeforces.ml/problemset?order=BY_SOLVED_DESC&tags=1300-1700">here</a> 是cf <strong>1300 - 1700</strong> 的题目，按照过的人数排序，多刷题。</li>
+<li>无论 CF，ABC，HDU多校，赛后都希望各位尽可能能写一下<strong>个人感悟和题解</strong>，在写题解的过程中可以思考更全面一些，有助于更理解题目。</li>
+<li>关于分方向的问题，铜牌题的题目难度其实不至于到分方向，尽可能的全部学习吧，起码以后找工作考你算法总不会太掉面，<strong>不分方向！！！</strong></li>
+<li>咱们都想拿奖，但咱们也确实得为了拿奖付出点时间和精力不是么？</li>
+</ul>
+</p>
+      <div class="post-button"><a class="btn" href="/WzW0104.github.io/2021/01/12/%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
 
 
-</main>
-
-            <footer class="footer">
-    
 
 
-    
-     
- 
-
- 
-    
-        
-        <p class="footer-copyright">
-            Copyright © 2021 <a href="/WzW0104.github.io/">Wise_4</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+<footer>
+  <div>
+  Copyright &copy; 2021.<a href="/WzW0104.github.io/">Wise_4</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
 </footer>
 
+  </div>
+</div>
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/WzW0104.github.io/"><img src="/WzW0104.github.io/images/avatar.jpeg" alt="WzW"/></a>
+          </div>
         </div>
-         
-
- 
-
- 
-
- 
-
-  
-
-
-
- 
-
-
+        <div class="row for-name">
+          <p>WzW</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/WzW0104.github.io/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
     
- 
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/WzW0104.github.io/guestbook/">Guestbook</a></li>
+        <li><a href="/WzW0104.github.io/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
 
- 
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
 
- 
 
- 
-
- 
-
-
-
-
-    </body>
+</body>
 </html>

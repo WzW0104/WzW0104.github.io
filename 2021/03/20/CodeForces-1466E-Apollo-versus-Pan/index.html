@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>CodeForces-1466E-Apollo versus Pan | Wise_4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="WzW">
+  <meta name="keywords" content="Acmer Rookie">
+  <meta name="description" content="Wise_4's Blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/WzW0104.github.io/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/WzW0104.github.io/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/WzW0104.github.io/"><img src="/WzW0104.github.io/images/avatar.jpeg"></a></div>
+    <span>2021-03-20</span>
+    <h2>CodeForces-1...</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-none-link" href="/WzW0104.github.io/tags/%E6%95%B0%E5%AD%A6-%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag">数学 位运算</a></div>
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p><strong>CodeForces-1466E-<em>Apollo versus Pan</em></strong></p>
+<p>题解：</p>
+<ol>
+<li><p>固定 <strong><em>j</em></strong> 转换式子如下：<br>$$<br>\sum_{i=1}^n \sum_{j=1}^n \sum_{k=1}^n (x_i , &amp; , x_j) \cdot (x_j , | , x_k) = \sum_{j=1}^n \sum_{i=1}^n (x_i , &amp; , x_j) \sum_{k=1}^n (x_j , | , x_k) = \sum_{j=1}^n \left[ \sum_{i=1}^n (x_i , &amp; , x_j) \right] \cdot \left[ \sum_{k=1}^n (x_j , | , x_k) \right]<br>$$</p>
+</li>
+<li><p>下面思考如何快速求出 <strong><em>x[j]</em></strong>与整个数组所有数的 <strong><em>&amp;</em></strong> 之和 <strong><em>exp_and</em></strong> 还有 <strong><em>｜</em></strong> 之和 <strong><em>exp_or</em></strong>。</p>
+<p>把数组全部转换成二进制的形式放在 <strong><em>p</em></strong> 数组中。**<em>p[i]**</em> : 表示数组中所有数字第i位为1的数量。</p>
+<p>先考虑 <strong><em>&amp;</em></strong>，如果 <strong><em>Xj</em></strong> 在第 <strong><em>i</em></strong> 位二进制位中是 1，那么 <strong><em>exp_and</em></strong> 加上 1 &lt;&lt; i * <strong><em>p[i]</em></strong>就好，否则不更新，因为乘积为0.</p>
+<p>再考虑 <strong><em>｜</em></strong>，如果 <strong><em>Xj</em></strong> 在第 <strong><em>i</em></strong> 位二进制位中是 1，那么**<em>exp_or**</em> 加上 1 &lt;&lt; i * n，因为｜操作之后所有数字第 i</p>
+<p>位都会变成 1;否则 <strong><em>exp_or</em></strong> 加上 1 &lt;&lt; i * <strong><em>p[i]</em></strong>.</p>
+<p>复杂度<br>$$<br>\mathcal{O}(nM) = \mathcal{O}(n \log \max_i(x_i))<br>$$</p>
+</li>
+<li><p>细节：更新 <strong><em>exp_or</em></strong> 以及 <strong><em>exp_and</em></strong> 时注意数字溢出。</p>
+</li>
+</ol>
+<p>Thinking：</p>
+<blockquote>
+<p>数学思维的欠缺是对于竞赛的不尊重。</p>
+<p>我尝试将三重循环拆开然后再找相似点合并成公式，但确实徒劳无功，不如直接对公式进行化简和整理。</p>
+<p>这种题目就是一看就懂，一写就废。加油吧！</p>
+</blockquote>
+<p>Code：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;ll&gt; a;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ll p[<span class="number">66</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    ll n;<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    a.resize(n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= <span class="number">60</span>;++i) p[i]= <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;++i) &#123;</span><br><span class="line">    	<span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">60</span>;++j) &#123;</span><br><span class="line">    		p[j] += a[i] &gt;&gt; j &amp; <span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;++i) &#123;</span><br><span class="line">    	ll exp_or = <span class="number">0</span>,exp_and = <span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">60</span>;++j) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(a[i] &gt;&gt; j &amp; <span class="number">1</span>) &#123;</span><br><span class="line">    			exp_and += (ll(<span class="number">1</span>) &lt;&lt; j) % mod * p[j]; </span><br><span class="line">    			exp_or += (ll(<span class="number">1</span>) &lt;&lt; j ) % mod * n;</span><br><span class="line">    		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    			exp_or += (ll(<span class="number">1</span>) &lt;&lt; j) % mod * p[j];</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	exp_or %= mod;</span><br><span class="line">    	exp_and %= mod;</span><br><span class="line">    	ans = (ans + ll(<span class="number">1</span>) * exp_or * exp_and) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	IO</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">int</span> t;<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--) solve();</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="#">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>No newer post</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/WzW0104.github.io/2021/03/20/%E5%AD%97%E7%AC%A6%E4%B8%B2Hash%E7%9A%84%E8%89%BA%E6%9C%AF/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>字符串Hash...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2021.<a href="/WzW0104.github.io/">Wise_4</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/WzW0104.github.io/"><img src="/WzW0104.github.io/images/avatar.jpeg" alt="WzW"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>WzW</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/WzW0104.github.io/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/WzW0104.github.io/guestbook/">Guestbook</a></li>
+        <li><a href="/WzW0104.github.io/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

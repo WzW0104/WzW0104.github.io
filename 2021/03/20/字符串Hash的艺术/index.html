@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>字符串Hash的艺术 | Wise_4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="WzW">
+  <meta name="keywords" content="Acmer Rookie">
+  <meta name="description" content="Wise_4's Blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/WzW0104.github.io/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/WzW0104.github.io/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/WzW0104.github.io/"><img src="/WzW0104.github.io/images/avatar.jpeg"></a></div>
+    <span>2021-03-20</span>
+    <h2>字符串Hash的艺术</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-none-link" href="/WzW0104.github.io/tags/Hash-%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag">Hash 字符串</a></div>
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="字符串Hash"><a href="#字符串Hash" class="headerlink" title="字符串Hash"></a><strong><em>字符串Hash</em></strong></h1><ol>
+<li>字符串匹配问题：求出模式串的Hash值，并求出匹配串的Hash数组，从匹配串开始逐次往后匹配Hash值，如果相同 ++ans。</li>
+<li>求在字符串后添加最少数量的字符串，以使得添加后的整体字符串变成回文串：从字符串末尾向前，维护正向和反向两个维度的Hash值，当两者匹配时，记录当前位置为最短位置。</li>
+<li>字符串Hash求最大回文：添加特殊字符使字符串变成中心结构，计算前后两个维度的Hash数组，遍历字符串，通过匹配以当前位置和当前最大回文半径所构成字符串正反两维度，维护当前最长回文半径这个值，</li>
+</ol>
+<ul>
+<li><p>Base 这个值 ： 131，13331，尽量记几个大质数。</p>
+</li>
+<li><p>ull，敢不加？</p>
+</li>
+<li><p>从Hash数组中获取L，R的Hash值：</p>
+<p>正：Hash_1[r] - P[r - l + 1] * Hash_1[l-1];</p>
+<p>反：Hash_2[l] - P[r - l + 1] * Hash_2[r+1];</p>
+</li>
+</ul>
+<h1 id="CF128-B–Hash的艺术～"><a href="#CF128-B–Hash的艺术～" class="headerlink" title="CF128-B–Hash的艺术～"></a>CF128-B–Hash的艺术～</h1><h5 id="题意：给你一个字符串-S，求最长的一个字串-T，使得-T-既是-S-的前缀也是后缀，也得是中缀。"><a href="#题意：给你一个字符串-S，求最长的一个字串-T，使得-T-既是-S-的前缀也是后缀，也得是中缀。" class="headerlink" title="题意：给你一个字符串 S，求最长的一个字串 T，使得 T 既是 S 的前缀也是后缀，也得是中缀。"></a>题意：给你一个字符串 <strong><em>S</em></strong>，求最长的一个字串 <strong><em>T</em></strong>，使得 <strong><em>T</em></strong> 既是 <strong><em>S</em></strong> 的前缀也是后缀，也得是中缀。</h5><h5 id="思路：哈希大法！！！先筛选出满足既是前缀又是后缀的字符串，然后二分这些字符串，如果长度对于一个前缀-T，如果存在一个不在最左边也不在最右边的子串-U，那么一个比-T-短的前缀也一定能找到对应的-U。"><a href="#思路：哈希大法！！！先筛选出满足既是前缀又是后缀的字符串，然后二分这些字符串，如果长度对于一个前缀-T，如果存在一个不在最左边也不在最右边的子串-U，那么一个比-T-短的前缀也一定能找到对应的-U。" class="headerlink" title="思路：哈希大法！！！先筛选出满足既是前缀又是后缀的字符串，然后二分这些字符串，如果长度对于一个前缀 T，如果存在一个不在最左边也不在最右边的子串 U，那么一个比 T  短的前缀也一定能找到对应的 U。"></a>思路：哈希大法！！！先筛选出满足既是前缀又是后缀的字符串，然后二分这些字符串，如果长度对于一个前缀 <strong><em>T</em></strong>，如果存在一个不在最左边也不在最右边的子串 <strong><em>U</em></strong>，那么一个比 <strong><em>T</em></strong>  短的前缀也一定能找到对应的 <strong><em>U</em></strong>。</h5><p>代码-&gt;&gt;</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">ull Hash[maxn],p,Base = <span class="number">131</span>,P[maxn];</span><br><span class="line"><span class="keyword">int</span> len ;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function">ull <span class="title">Get_Element</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (ull) Hash[r] - P[r-l+<span class="number">1</span>] * Hash[l<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> mid,ull val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i + mid &lt;= len;++i) &#123;</span><br><span class="line">        ull tmp = Get_Element(i, i + mid - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(tmp == val) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; (s + <span class="number">1</span>);</span><br><span class="line">    len = <span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    Hash[<span class="number">0</span>] = P[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= len;++i) P[i] = P[i<span class="number">-1</span>] * Base;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= len;++i) &#123;</span><br><span class="line">        Hash[i] = Hash[i<span class="number">-1</span>] * Base + s[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    vi a;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; len;++i) &#123;</span><br><span class="line">        <span class="keyword">if</span>(Get_Element(<span class="number">1</span>, i) == Get_Element(len + <span class="number">1</span> - i, len)) &#123;</span><br><span class="line">            a.push_back(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">0</span>,r = a.size() - <span class="number">1</span>,ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(l &lt;= r) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(check(a[mid], Get_Element(<span class="number">1</span>, a[mid]))) &#123;</span><br><span class="line">            ans = max(ans,a[mid]);</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(ans == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Just a legend\n&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= ans;++i) <span class="built_in">cout</span> &lt;&lt; s[i];</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// clock_t st = clock();</span></span><br><span class="line">    IO</span><br><span class="line">    </span><br><span class="line">    solve();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// clock_t end = clock();</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; &quot;Time:&quot; &lt;&lt; (end - st) / CLOCKS_PER_SEC &lt;&lt; endl;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/WzW0104.github.io/2021/03/20/CodeForces-1466E-Apollo-versus-Pan/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>CodeFor...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/WzW0104.github.io/2021/01/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>数据结构 表达...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2021.<a href="/WzW0104.github.io/">Wise_4</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/WzW0104.github.io/"><img src="/WzW0104.github.io/images/avatar.jpeg" alt="WzW"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>WzW</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/WzW0104.github.io/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/WzW0104.github.io/guestbook/">Guestbook</a></li>
+        <li><a href="/WzW0104.github.io/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>
